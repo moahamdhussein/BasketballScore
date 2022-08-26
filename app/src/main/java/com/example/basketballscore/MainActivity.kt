@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     var statB = mutableListOf(0, 0, 0)
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,9 +39,7 @@ class MainActivity : AppCompatActivity() {
             counterA += 2
             statA[1]++
             counter_a.text = counterA.toString()
-
         }
-
         free_point_A.setOnClickListener {
             counterA++
             statA[2]++
@@ -78,6 +77,15 @@ class MainActivity : AppCompatActivity() {
             secondScreen("end", intent)
 
         }
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val counter_a = findViewById<TextView>(R.id.counter_A)
+        val counter_b = findViewById<TextView>(R.id.counter_B)
+        counter_a.text = counterA.toString()
+        counter_b.text = counterB.toString()
 
     }
 
