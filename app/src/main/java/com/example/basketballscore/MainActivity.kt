@@ -7,18 +7,20 @@ import android.widget.Button
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-    var counterA: Int = 0
-    var counterB: Int = 0
-    var statA = mutableListOf(0, 0, 0)
-    var statB = mutableListOf(0, 0, 0)
+    private var counterA: Int = 0
+    private var counterB: Int = 0
+    private var statA = mutableListOf(0, 0, 0)
+    private var statB = mutableListOf(0, 0, 0)
 
+    private lateinit var counter_a: TextView
+    private lateinit var counter_b: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val counter_a = findViewById<TextView>(R.id.counter_A)
-        val counter_b = findViewById<TextView>(R.id.counter_B)
+        counter_a = findViewById<TextView>(R.id.counter_A)
+        counter_b = findViewById<TextView>(R.id.counter_B)
         val three_point_A = findViewById<Button>(R.id.threePointA)
         val two_point_A = findViewById<Button>(R.id.twoPointA)
         val free_point_A = findViewById<Button>(R.id.freePointA)
@@ -29,55 +31,39 @@ class MainActivity : AppCompatActivity() {
         val statistics = findViewById<Button>(R.id.statistics)
 
         three_point_A.setOnClickListener {
-            counterA += 3
-            statA[0]++
-            counter_a.text = counterA.toString()
+            addPointsA(3, 0)
 
         }
 
         two_point_A.setOnClickListener {
-            counterA += 2
-            statA[1]++
-            counter_a.text = counterA.toString()
+            addPointsA(2, 1)
         }
         free_point_A.setOnClickListener {
-            counterA++
-            statA[2]++
-            counter_a.text = counterA.toString()
+            addPointsA(1, 2)
 
         }
 
         three_point_B.setOnClickListener {
-            counterB += 3
-            statB[0]++
-            counter_b.text = counterB.toString()
+            addPointsB(3, 0)
 
         }
 
         two_point_B.setOnClickListener {
-            counterB += 2
-            statB[1]++
-            counter_b.text = counterB.toString()
+            addPointsB(2, 1)
 
         }
         free_point_B.setOnClickListener {
-            counterB++
-            statB[2]++
-            counter_b.text = counterB.toString()
+            addPointsB(1, 2)
         }
 
         statistics.setOnClickListener {
             val intent = Intent(this, StatisticsActivity::class.java)
             secondScreen("stat", intent)
-
-
         }
         end.setOnClickListener {
             val intent = Intent(this, StatisticsActivity::class.java)
             secondScreen("end", intent)
-
         }
-
     }
 
     override fun onResume() {
@@ -86,7 +72,18 @@ class MainActivity : AppCompatActivity() {
         val counter_b = findViewById<TextView>(R.id.counter_B)
         counter_a.text = counterA.toString()
         counter_b.text = counterB.toString()
+    }
 
+    private fun addPointsA(point: Int, pointType: Int) {
+        counterA += point
+        statA[pointType]++
+        counter_a.text = counterA.toString()
+    }
+
+    private fun addPointsB(point: Int, pointType: Int) {
+        counterB += point
+        statB[pointType]++
+        counter_b.text = counterB.toString()
     }
 
     private fun secondScreen(type: String, intent: Intent) {
