@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/team_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Team A"
+        android:textColor="#999999"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/separator"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/counter_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_A" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/threePointA"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#ff9900"
+        android:text="+3 points"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/counter_A"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/twoPointA"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#ff9900"
+        android:text="+2 points"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/threePointA"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/freePointA"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#ff9900"
+        android:text="Free Throw"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/twoPointA"
+        tools:ignore="TextContrastCheck" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="1dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textColor="#999999"
+        android:text="Team B"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@id/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/counter_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textSize="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/team_B"
+        app:layout_constraintStart_toEndOf="@+id/separator"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/threePointB"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#ff9900"
+        android:text="+3 points"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/separator"
+        app:layout_constraintTop_toBottomOf="@id/counter_B"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/twoPointB"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#ff9900"
+        android:text="+2 points"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/separator"
+        app:layout_constraintTop_toBottomOf="@id/threePointB"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/freePointB"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#ff9900"
+        android:text="Free Throw"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/separator"
+        app:layout_constraintTop_toBottomOf="@id/twoPointB"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/statistics"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#ff9900"
+        android:text="statistics"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/End"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:background="#ff9900"
+        android:text="End Game"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

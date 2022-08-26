@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticsActivity">
+
+
+    <TextView
+        android:id="@+id/team_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Team A"
+        android:textColor="#999999"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/separator"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/threeA"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Three point"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team_A" />
+
+    <TextView
+        android:id="@+id/counterThreeA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@id/threeA"
+        app:layout_constraintEnd_toStartOf="@id/separator"
+        app:layout_constraintTop_toBottomOf="@id/team_A" />
+
+
+    <TextView
+        android:id="@+id/twoA"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Two point"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/threeA" />
+
+    <TextView
+        android:id="@+id/counterTwoA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@id/separator"
+        app:layout_constraintStart_toEndOf="@+id/twoA"
+        app:layout_constraintTop_toBottomOf="@+id/threeA" />
+
+    <TextView
+        android:id="@+id/freeA"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Free point"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/twoA" />
+
+    <TextView
+        android:id="@+id/counterFreeA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@id/separator"
+        app:layout_constraintStart_toEndOf="@+id/freeA"
+        app:layout_constraintTop_toBottomOf="@id/twoA" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="1dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Team A"
+        android:textColor="#999999"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@id/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/threeB"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Three point"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/separator"
+        app:layout_constraintTop_toBottomOf="@id/team_B" />
+
+    <TextView
+        android:id="@+id/counterThreeB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@id/threeB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team_B" />
+
+
+    <TextView
+        android:id="@+id/twoB"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Two point"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/separator"
+        app:layout_constraintTop_toBottomOf="@id/threeB" />
+
+    <TextView
+        android:id="@+id/counterTwoB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/twoB"
+        app:layout_constraintTop_toBottomOf="@+id/threeB" />
+
+    <TextView
+        android:id="@+id/freeB"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:text="Free point"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/separator"
+        app:layout_constraintTop_toBottomOf="@id/twoB" />
+
+    <TextView
+        android:id="@+id/counterFreeB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/freeB"
+        app:layout_constraintTop_toBottomOf="@id/twoB" />
+
+    <TextView
+        android:id="@+id/win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="50dp"
+        android:textColor="#7cfc00"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separator" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#ff9900"
+        android:text="Back"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/win"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
